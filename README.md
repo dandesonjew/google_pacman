@@ -7,7 +7,7 @@ Pacman's 30th Anniversary.
 With the help of StackOverflow users, we were able to get a playable
 version working 100%.
 
-To play a live version: http://macek.github.com/google_pacman
+To play a live version: http://kevinchau321.github.io/google_pacman
 
 Or download the source and run it offline.
 
