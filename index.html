@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Google Pac-Man by kevinchau321</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-
-    <script>
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Google Pacman</title>
+  <script>
     window.google = {}
-    </script>
-
-    <style>
+  </script>
+  <style>
     body{background:#222;font-family:monospace;margin-top:50px}
     td{line-height:.8em;}
     form{margin-bottom:20px;}
     input{font-family:inherit;-moz-box-sizing:content-box}
     a{color:#11c;text-decoration:none}
     a:hover,a:active{text-decoration:underline}
-    /*a:visited{color:#551a8b}*/
+    a:visited{color:#551a8b}
     #logo{width:554px;height:186px;background:black url(src/pacman10-hp.gif) 0 0 no-repeat;position:relative;margin-bottom:9px}
     #logo-l{width:200px;height:2px;left:177px;top:157px;background:#990;position:absolute;display:none;overflow:hidden}
     #logo-b{position:absolute;left:0;background:#ff0;height:8px;width:0}
@@ -34,11 +27,13 @@
     #footer ul{list-style-type:none;padding:0}
     #footer a{display:inline-block;color:#444;font-size:10pt;font-family:monospace;padding:5px}
     #footer a:hover{color:#666;text-decoration:none;background:#333}
-    </style>
+    
+  </style>
+</head>
+<body>
+  <center>
 
-  </head>
-  <body>
-    <section class="page-header">
+  <section class="page-header">
       <h1 class="project-name">Google Pac-Man</h1>
       <h2 class="project-tagline">Play Google Pac-Man</h2>
       <a href="https://github.com/kevinchau321/google_pacman" class="btn">View on GitHub</a>
@@ -46,161 +41,84 @@
       <a href="https://github.com/kevinchau321/google_pacman/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
-    <section class="main-content">
-      <center>
-        <div id="wrapper">
-          <a href="#gameover" id="dlink"></a>
-          <div id='logo' title="PAC-MAN's 30th Birthday! Doodle with PAC-MAN™ & ©1980 NAMCO BANDAI Games Inc.">
-            <div id="logo-l">
-              <div id="logo-b">
-              </div>
-            </div>
-          </div>
+
+
+
+  <div id="wrapper">
+    <a href="#gameover" id="dlink"></a>
+    <div id='logo' title="PAC-MAN's 30th Birthday! Doodle with PAC-MAN™ & ©1980 NAMCO BANDAI Games Inc.">
+      <div id="logo-l">
+        <div id="logo-b">
         </div>
-        <script>
-          google.dom = {};
-          google.pacManSound = true;
-          google.browser = {};
-          google.browser.engine = {}
-          google.dom.remove = function (a) {
-          return a && a.parentNode && a.parentNode.removeChild(a)
-          };
-          google.dom.append = function (a) {
-          return document.body.appendChild(a)
-          };
-          google.browser.engine.IE = false
-          google.pml = function () {
-            function d(a) {
-              if (!google.pml_installed) {
-                google.pml_installed = true;
-                if (!a) {
-                  document.getElementById("logo").style.background = "black";
-                  window.setTimeout(function () {
-                    var b = document.getElementById("logo-l");
-                    if (b) b.style.display = "block"
-                  }, 400)
-                }
-                a = document.createElement("script");
-                a.type = "text/javascript";
-                a.src = "src/js/pacman10-hp.3.js";
-                document.body.appendChild(a)
-              }
-            }
-            function e() {
-              if (document.f && document.f.btnI) document.f.btnI.onclick = function () {
-                  typeof google.pacman != "undefined" ? google.pacman.insertCoin() : d(false);
-                  return false
-              }
-            }
-            if (!google.pml_loaded) {
-              google.pml_loaded = true;
-              window.setTimeout(function () {
-                document.f && d(true)
-              }, 1E4);
-              e();
-            }
-          };
-        </script>
-        
-
-        <form action="#submit" name='f'>
-          <table width="23%" cellpadding='0' cellspacing='0'>
-            <tr valign='top'>
-              <td align='center' nowrap><br style="line-height:0">
-                <span class='ds'>
-                  <span class='lsbb'>
-                    <input name='btnI' type='submit' value="Insert Coin" class='lsb'>
-                  </span>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </form>
-        
-        <div id="footer">
-          <ul>
-            <li><a href="http://github.com/kevinchau321/google_pacman">GitHub kevinchau321/google_pacman</a></li>
-            <li><a href="http://google.com">&copy; 2010, Google</a></li>
-            <li><a href="http://pacman.com">&copy; 1980, NAMCO BANDAI Games Inc.</a></li>
-          </ul>
-        </div>
-        <script>google.pml && google.pml()</script>
-        </center>
-
-        <h3>
-        <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>README</h3>
-
-        <p> 
-        Google Pacman<br>
-        -------------
-        <br>
-        This is a copy of Google's playable Pacman game logo hosted for
-        Pacman's 30th Anniversary.
-        <br>
-        With the help of StackOverflow users, we were able to get a playable
-        version working 100%.
-        <br>
-        To play a live version: <a href="http://kevinchau321.github.io/google_pacman">http://kevinchau321.github.io/google_pacman</a>
-        <br>
-        Or download the source and run it offline.
-        <br>
-        <br>
-        <br>
-        Sound in Offline Mode<br>
-        ---------------------
-        <br>
-        A snippet from Adobe.com
-        <br>
-        > For example, a trusted local HTML file may permit an untrusted local SWF to script it by setting allowScriptAccess="always". However, an untrusted local HTML file may never permit an untrusted local SWF to script it, regardless of the value of allowScriptAccess.
-        <br>
-        To have flash trust your local SWF, you must add your google_pacman
-        folder to the allow list using your Flash Control Panel.
-        <br>
-        1. Adobe Flash Control Panel: 
-           <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html">http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html</a>
-        <br>
-        2. Click `Edit Locations`
-        <br>
-        3. Click `Add Location`
-        <br>
-        4. Browse to your `google_pacman` directory
-        <br>
-        5. Click `Confirm`
-        <br>
-        Read more about this issue here:
-        http://www.adobe.com/devnet/flash/articles/fplayer8_security_09.html
-        <br>
-        <br>
-        <br>
-        Thanks to:<br>
-        ----------<br>
-        SteD for providing a nicely formatted version of pacman10-hp.2.js
-        <br>
-        Skizo for noticing that relative paths don't work as expected when
-        executed locally
-        <br>
-        Skizo for fixing issue: "Ghosts stay blue permanently on restart"
-        <br>
-        Mason Barry for cleaning up the homepage, adding a nice starting graphic,
-        and fixing the `Insert Coin` button
-        <br>
-        winwakr for showing us how to get sound working in offline mode.
-        <br>
-        KevinCathcart for recommending we setup a live version on the `gh-pages` branch
-        <br>
-        KevinCathcart and Barry Silverman for removing a good amount of unnecessary HTML/JavaScript
-        <br>
-        KevinCathcart and Barry Silverman for getting the famous intro song working
-        </p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/kevinchau321/google_pacman">Google pacman</a> is maintained by <a href="https://github.com/kevinchau321">kevinchau321</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
+      </div>
+    </div>
+  </div>
+  <script>
+    google.dom = {};
+    google.pacManSound = true;
+    google.browser = {};
+    google.browser.engine = {}
+    google.dom.remove = function (a) {
+    return a && a.parentNode && a.parentNode.removeChild(a)
+    };
+    google.dom.append = function (a) {
+    return document.body.appendChild(a)
+    };
+    google.browser.engine.IE = false
+    google.pml = function () {
+      function d(a) {
+        if (!google.pml_installed) {
+          google.pml_installed = true;
+          if (!a) {
+            document.getElementById("logo").style.background = "black";
+            window.setTimeout(function () {
+              var b = document.getElementById("logo-l");
+              if (b) b.style.display = "block"
+            }, 400)
+          }
+          a = document.createElement("script");
+          a.type = "text/javascript";
+          a.src = "src/js/pacman10-hp.3.js";
+          document.body.appendChild(a)
+        }
+      }
+      function e() {
+        if (document.f && document.f.btnI) document.f.btnI.onclick = function () {
+            typeof google.pacman != "undefined" ? google.pacman.insertCoin() : d(false);
+            return false
+        }
+      }
+      if (!google.pml_loaded) {
+        google.pml_loaded = true;
+        window.setTimeout(function () {
+          document.f && d(true)
+        }, 1E4);
+        e();
+      }
+    };
+  </script>
   
-  </body>
+  <form action="#submit" name='f'>
+    <table width="23%" cellpadding='0' cellspacing='0'>
+      <tr valign='top'>
+        <td align='center' nowrap><br style="line-height:0">
+          <span class='ds'>
+            <span class='lsbb'>
+              <input name='btnI' type='submit' value="Insert Coin" class='lsb'>
+            </span>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+  <div id="footer">
+    <ul>
+      <li><a href="http://github.com/kevinchau321/google_pacman">GitHub kevinchau321/google_pacman</a></li>
+      <li><a href="http://google.com">&copy; 2010, Google</a></li>
+      <li><a href="http://pacman.com">&copy; 1980, NAMCO BANDAI Games Inc.</a></li>
+    </ul>
+  </div>
+  <script>google.pml && google.pml()</script>
+  </center>
 </html>
